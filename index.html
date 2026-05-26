@@ -227,17 +227,15 @@
     <section>
       <span class="section-title">Upcoming Event</span>
       <div class="event-card">
-        <div class="event-label">Guest Talk · S14 · May 12, 2026</div>
+        <div class="event-label">Guest Talk · S15 · May 26, 2026</div>
         <div class="event-card-inner">
-          <img class="event-speaker-photo" src="photos/sheridan_photo.jpg" alt="Sheridan Feucht">
+          <img class="event-speaker-photo" src="photos/william_photo.jpg" alt="William Dorrell">
           <div class="event-card-content">
-            <h3>Arithmetic in the Wild: Llama uses Addition to Reason About Cyclic Concepts</h3>
-            <div class="meta"><strong>Sheridan Feucht</strong> (PhD Student, Northeastern University · Bau &amp; Wallace Labs · formerly Goodfire AI)<br/>
-              Tuesday, May 12, 2026 · 3:00–4:00 PM ET · SEC 6.301
+            <h3>How Optimality Structures Sparse Dictionaries: A Theory for Understanding SAE Representations</h3>
+            <div class="meta"><strong>William Dorrell</strong> (Kempner Fellow)<br/>
+              Tuesday, May 26, 2026 · 3:00–4:00 PM ET · SEC 6.242
             </div>
-            <p>Does structure in representations imply structure in computation? We study how Llama-3.1-8B reasons over cyclic concepts (e.g., "what month is three months after November?"). Even though Llama-3.1-8B has circular representations for these concepts, we find that instead of directly computing modular addition in the period of the cyclic concept (e.g., 12 for months), the model re-uses a generic addition mechanism across tasks that operates independently of concept-specific geometry. First, it computes the sum of its two inputs using non-modular addition (three + November = 14). Then, it maps back to cyclic concept space (14 → February). We show that Llama-3.1-8B uses task-agnostic Fourier features to compute these sums—in fact, these features have periods that respect standard base-10 addition, e.g., 2, 5, and 10, rather than the cyclic concept period (e.g., 12). Furthermore, we identify a sparse, reusable set of 28 MLP neurons (~0.2% of the MLP at layer 18) that can be partitioned into disjoint clusters that each compute the sum for a Fourier feature with a different period.</p>
-            <a class="btn" href="https://arxiv.org/abs/2605.01148" target="_blank">Read Paper →</a>
-            <a class="btn btn-outline" href="https://forms.gle/a8U8vy7xVM2eEqGq6" target="_blank">Sign up in person →</a>
+            <p>Sparse Autoencoders (SAEs) have found widespread success parsing neural representations into interpretable concepts, providing a basis for understanding and control. However, what exactly an SAE extracts, and, correspondingly, the scientific conclusions we can draw, is not obvious. Empirically, the proof is in the pudding: SAEs do learn interpretable features. Theoretically, we lack a clear account of what properties a 'concept' must satisfy for an SAE to extract it. There is an extensive body of work studying sparse coding identifiability; in particular, given data generated under sparsity assumptions, when will an algorithm recover the true factors? However, SAEs are trained on internet-swallowing representations that are poorly approximated by simple generative models. Rather than assuming a hypothesised ground truth, we ask what properties any dictionary learning optimum must satisfy without data-assumptions. Concretely, we extend existing local optimality analyses to the nonnegative joint-optimisation problem that vanilla SAEs approximate, and derive constraints relating optimal SAE features to their distributions. We use these to explain a range of observed SAE behaviours - hierarchical splitting &amp; absorption, the structure of residuals, and dense antipodal features - each reflecting how L1+nonnegativity interact with data to structure optimal dictionaries. Further, we identify a novel convex formulation of the problem, and use it to ask: will larger SAEs ever stop splitting? We find the answer can be yes, with a limiting dictionary state that clusters data along rays. In sum, we hope this framework can tease model assumptions from unexpected observations, letting us learn more from SAEs' successes.</p>
             <a class="btn btn-outline" href="https://harvard.zoom.us/j/98863236092?pwd=C819LIgV7iJ4N3Cul9AsMQspphe5Xa.1" target="_blank">Join on Zoom →</a>
           </div>
         </div>
@@ -248,17 +246,16 @@
     <section>
       <span class="section-title">Most Recent Event</span>
       <div class="event-card">
-        <div class="event-label">Paper Discussion · S13 · April 28, 2026</div>
+        <div class="event-label">Guest Talk · S14 · May 12, 2026</div>
         <div class="event-card-inner">
-          <img class="event-speaker-photo" src="photos/sonja_photo.jpg" alt="Sonja Johnson-Yu">
+          <img class="event-speaker-photo" src="photos/sheridan_photo.jpg" alt="Sheridan Feucht">
           <div class="event-card-content">
-            <h3>Unveiling Value Functions in Social Cognition with Multi-Agent Inverse Reinforcement Learning</h3>
-            <div class="meta"><strong>Sonja Johnson-Yu</strong> (Rajan Lab)<br/>
-              Monday, April 28, 2026 · 3:00–4:00 PM ET · SEC 6.247
+            <h3>Arithmetic in the Wild: Llama uses Addition to Reason About Cyclic Concepts</h3>
+            <div class="meta"><strong>Sheridan Feucht</strong> (PhD Student, Northeastern University · Bau &amp; Wallace Labs · formerly Goodfire AI)<br/>
+              Tuesday, May 12, 2026 · 3:00–4:00 PM ET · SEC 6.301
             </div>
-            <p>This paper introduces MAIRL, a multi-agent inverse reinforcement learning framework that recovers interpretable, decomposed value maps from behavior, revealing how latent value functions conditioned on social roles govern multi-agent interactions across species.</p>
-            <a class="btn" href="https://www.biorxiv.org/content/10.1101/2024.10.09.617461v2" target="_blank">Read Paper →</a>
-            <a class="btn btn-outline" href="https://harvard.zoom.us/j/98863236092?pwd=C819LIgV7iJ4N3Cul9AsMQspphe5Xa.1" target="_blank">Zoom link →</a>
+            <p>Does structure in representations imply structure in computation? We study how Llama-3.1-8B reasons over cyclic concepts (e.g., "what month is three months after November?"). Even though Llama-3.1-8B has circular representations for these concepts, we find that instead of directly computing modular addition in the period of the cyclic concept (e.g., 12 for months), the model re-uses a generic addition mechanism across tasks that operates independently of concept-specific geometry. First, it computes the sum of its two inputs using non-modular addition (three + November = 14). Then, it maps back to cyclic concept space (14 → February). We show that Llama-3.1-8B uses task-agnostic Fourier features to compute these sums—in fact, these features have periods that respect standard base-10 addition, e.g., 2, 5, and 10, rather than the cyclic concept period (e.g., 12). Furthermore, we identify a sparse, reusable set of 28 MLP neurons (~0.2% of the MLP at layer 18) that can be partitioned into disjoint clusters that each compute the sum for a Fourier feature with a different period.</p>
+            <a class="btn" href="https://arxiv.org/abs/2605.01148" target="_blank">Read Paper →</a>
           </div>
         </div>
       </div>
@@ -311,6 +308,21 @@
     <section>
 
       <h2 style="font-size:1.1rem; color:var(--color-primary); margin:1.5rem 0 0.5rem; border-bottom: 2px solid var(--color-border); padding-bottom:0.4rem;">Spring 2026</h2>
+
+      <div class="event-card">
+        <div class="event-label">Guest Talk · S14 · May 12, 2026</div>
+        <div class="event-card-inner">
+          <img class="event-speaker-photo" src="photos/sheridan_photo.jpg" alt="Sheridan Feucht">
+          <div class="event-card-content">
+            <h3>Arithmetic in the Wild: Llama uses Addition to Reason About Cyclic Concepts</h3>
+            <div class="meta"><strong>Sheridan Feucht</strong> (PhD Student, Northeastern University · Bau &amp; Wallace Labs · formerly Goodfire AI)<br/>
+              May 12, 2026 · 3:00–4:00 PM ET · SEC 6.301
+            </div>
+            <p>Does structure in representations imply structure in computation? We study how Llama-3.1-8B reasons over cyclic concepts (e.g., "what month is three months after November?"). Even though Llama-3.1-8B has circular representations for these concepts, we find that instead of directly computing modular addition in the period of the cyclic concept (e.g., 12 for months), the model re-uses a generic addition mechanism across tasks that operates independently of concept-specific geometry. First, it computes the sum of its two inputs using non-modular addition (three + November = 14). Then, it maps back to cyclic concept space (14 → February). We show that Llama-3.1-8B uses task-agnostic Fourier features to compute these sums—in fact, these features have periods that respect standard base-10 addition, e.g., 2, 5, and 10, rather than the cyclic concept period (e.g., 12). Furthermore, we identify a sparse, reusable set of 28 MLP neurons (~0.2% of the MLP at layer 18) that can be partitioned into disjoint clusters that each compute the sum for a Fourier feature with a different period.</p>
+            <a class="btn" href="https://arxiv.org/abs/2605.01148" target="_blank">Read Paper →</a>
+          </div>
+        </div>
+      </div>
 
       <div class="event-card">
         <div class="event-label">Paper Discussion · S13 · April 28, 2026</div>
