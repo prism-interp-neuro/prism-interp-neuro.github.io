@@ -227,6 +227,30 @@
     <section>
       <span class="section-title">Upcoming Event</span>
       <div class="event-card">
+        <div class="event-label">Guest Talk · S19 · June 30, 2026</div>
+        <div class="event-card-inner">
+          <div style="display:flex; flex-direction:column; gap:0.8rem; flex-shrink:0;">
+            <img class="event-speaker-photo" src="photos/tomer_photo.jpg" alt="Tomer Ashuach">
+            <img class="event-speaker-photo" src="photos/michael_photo.jpg" alt="Michael Toker">
+          </div>
+          <div class="event-card-content">
+            <div class="meta">Tuesday, June 30, 2026 · 3:00–4:00 PM ET · SEC 6.242 · ~30 min each</div>
+            <h3 style="margin-top:0.8rem;">Tomer Ashuach</h3>
+            <div class="meta"><strong>Tomer Ashuach</strong> (PhD Student, Technion · Belinkov Lab)</div>
+            <p>Tomer uses interpretability to uncover the internal mechanisms of LLMs — specifically how knowledge is acquired, represented, and edited. His talk covers two angles: (1) unlearning in LLMs via REVS (ACL Findings 2025), which locates neurons storing memorized sensitive information and surgically removes it, and CRISP (ACL 2026), which performs concept unlearning via Sparse Autoencoders; and (2) Privileged Knowledge in LMs (ACL 2026), asking whether models carry an internal signal about their own correctness that no external observer can retrieve.</p>
+            <h3 style="margin-top:1rem;">Michael Toker</h3>
+            <div class="meta"><strong>Michael Toker</strong> (PhD Candidate, Technion · Belinkov Lab)</div>
+            <p>Michael's research focuses on mechanistic interpretability of multi-modal models. He will present Diffusion Lens (ACL 2024), Padding Tone (NAACL 2025), and Follow the Flow (ACL 2026) — methods that reveal what text-to-image models learn and how computations are performed internally, with applications to solving problems like semantic leakage.</p>
+            <a class="btn btn-outline" href="https://harvard.zoom.us/j/91455051248?pwd=aDeFgx1oZabGNrvt2l6gpoMe961CRV.1" target="_blank">Join on Zoom →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOST RECENT EVENT -->
+    <section>
+      <span class="section-title">Most Recent Event</span>
+      <div class="event-card">
         <div class="event-label">Guest Talk · S18 · June 23, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/adi_photo.jpg" alt="Adi Simhi">
@@ -238,26 +262,6 @@
             <p>We will start with evaluating what happens in LLM decision-making in realistic, human-validated managerial scenarios via ManagerBench, indicating that frontier LLMs perform poorly when navigating the safety-pragmatism trade-off. We next turn to a multi-turn setting to investigate the "carryover-effect" — the phenomenon in which, for example, hallucinations in earlier interactions shape subsequent model responses. To study this, we developed HISTORY-ECHOES, a framework for analyzing how conversational history biases later generations. The framework approaches this from two angles: a probabilistic view, modeling conversations as Markov chains to quantify state consistency, and a geometric view, measuring the consistency of consecutive hidden representations — indicating a correlation between the two angles.</p>
             <a class="btn" href="https://arxiv.org/abs/2603.03308" target="_blank">Paper 1 →</a>
             <a class="btn btn-outline" href="https://arxiv.org/abs/2510.00857" target="_blank">Paper 2 →</a>
-            <a class="btn btn-outline" href="https://harvard.zoom.us/j/91455051248?pwd=aDeFgx1oZabGNrvt2l6gpoMe961CRV.1" target="_blank">Join on Zoom →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MOST RECENT EVENT -->
-    <section>
-      <span class="section-title">Most Recent Event</span>
-      <div class="event-card">
-        <div class="event-label">Guest Talk · S17 · June 16, 2026</div>
-        <div class="event-card-inner">
-          <img class="event-speaker-photo" src="photos/alex_photo.jpg" alt="Alex Oesterling">
-          <div class="event-card-content">
-            <h3>Modality-aware methods for interpretability</h3>
-            <div class="meta"><strong>Alex Oesterling</strong> (CS PhD Student, Harvard SEAS)<br/>
-              Tuesday, June 16, 2026 · 3:00–4:00 PM ET · SEC 6.242
-            </div>
-            <p>Interpretability promises a lever to control models, monitor their behavior, and learn from them. As such, we often imagine finding features in models such as "honesty," "conciseness," or "speaking in French." However, state-of-the-art methods find features that are local, syntactic, and uninteresting (e.g., "the phrase 'The' at the start of a sentence"), a critical gap between the proposed utility of interpretability and reality. More precisely, while we care about semantic features in models, we instead recover syntactic ones. Drawing on theory from computational linguistics, we propose a simple model of language production: semantic features are globally smooth across time, whereas syntactic features are local. We use this model to propose Temporal Sparse Autoencoders (T-SAEs), which employ a temporal contrastive loss to isolate smooth features in LLM representations. Importantly, T-SAEs recover semantic information despite being trained with only a self-supervised context-similarity objective, and successfully disentangle semantic and syntactic features. We present experiments demonstrating T-SAEs' ability to track semantic shifts over text sequences and applications to safety monitoring and steering. Finally, I will discuss ongoing extensions to vision models and alternative invariances suited for visual semantics, including opportunities to understand visual processing and predict neural activity.</p>
-            <a class="btn" href="https://arxiv.org/pdf/2511.05541" target="_blank">Read Paper →</a>
           </div>
         </div>
       </div>
@@ -310,6 +314,22 @@
     <section>
 
       <h2 style="font-size:1.1rem; color:var(--color-primary); margin:1.5rem 0 0.5rem; border-bottom: 2px solid var(--color-border); padding-bottom:0.4rem;">Spring 2026</h2>
+
+      <div class="event-card">
+        <div class="event-label">Guest Talk · S18 · June 23, 2026</div>
+        <div class="event-card-inner">
+          <img class="event-speaker-photo" src="photos/adi_photo.jpg" alt="Adi Simhi">
+          <div class="event-card-content">
+            <h3>Old Habits and Hard Choices: How LLMs Navigate Management Decision-Making and Earlier Interactions</h3>
+            <div class="meta"><strong>Adi Simhi</strong> (PhD Student, Technion · Belinkov Lab)<br/>
+              June 23, 2026 · 3:00–4:00 PM ET · SEC 6.242
+            </div>
+            <p>We will start with evaluating what happens in LLM decision-making in realistic, human-validated managerial scenarios via ManagerBench, indicating that frontier LLMs perform poorly when navigating the safety-pragmatism trade-off. We next turn to a multi-turn setting to investigate the "carryover-effect" — the phenomenon in which, for example, hallucinations in earlier interactions shape subsequent model responses. To study this, we developed HISTORY-ECHOES, a framework for analyzing how conversational history biases later generations. The framework approaches this from two angles: a probabilistic view, modeling conversations as Markov chains to quantify state consistency, and a geometric view, measuring the consistency of consecutive hidden representations — indicating a correlation between the two angles.</p>
+            <a class="btn" href="https://arxiv.org/abs/2603.03308" target="_blank">Paper 1 →</a>
+            <a class="btn btn-outline" href="https://arxiv.org/abs/2510.00857" target="_blank">Paper 2 →</a>
+          </div>
+        </div>
+      </div>
 
       <div class="event-card">
         <div class="event-label">Guest Talk · S17 · June 16, 2026</div>
