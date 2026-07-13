@@ -101,6 +101,29 @@
     .event-card-content .meta { font-size: 0.88rem; color: var(--color-muted); margin-bottom: 0.6rem; }
     .event-card-content p { font-size: 0.95rem; }
 
+    /* TOPIC TAGS */
+    .tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      padding: 0.18rem 0.6rem; border-radius: 99px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      margin-right: 0.35rem; margin-bottom: 0.5rem;
+    }
+    .tag-ml   { background: #ede9fe; color: #5b21b6; }
+    .tag-neuro { background: #d1fae5; color: #065f46; }
+
+    /* FILTER BUTTONS */
+    .filter-bar { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.2rem 0 0.5rem; }
+    .filter-btn {
+      font-size: 0.82rem; padding: 0.3rem 0.9rem; border-radius: 99px;
+      border: 1.5px solid var(--color-border); background: var(--color-surface);
+      color: var(--color-muted); cursor: pointer; font-family: var(--font-sans);
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .filter-btn.active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+    .filter-btn.active-ml   { background: #5b21b6; border-color: #5b21b6; color: #fff; }
+    .filter-btn.active-neuro { background: #065f46; border-color: #065f46; color: #fff; }
+
     /* BUTTONS */
     .btn {
       display: inline-block; margin-top: 0.8rem;
@@ -231,6 +254,7 @@
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/cameron_photo.jpg" alt="Cameron McNamee">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span><span class="tag tag-neuro">Neuroscience</span>
             <h3>Using Interpretability to Identify a Novel Class of Alzheimer's Biomarkers</h3>
             <div class="meta"><strong>Cameron McNamee</strong> (Grad Student, Ba Lab · Harvard SEAS)<br/>
               Tuesday, July 14, 2026 · 3:00–4:00 PM ET · SEC 6.242
@@ -254,6 +278,7 @@
             <img class="event-speaker-photo" src="photos/michael_photo.jpg" alt="Michael Toker">
           </div>
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <div class="meta">Tuesday, June 30, 2026 · 3:00–4:00 PM ET · SEC 6.242 · ~30 min each</div>
             <h3 style="margin-top:0.8rem;">Tomer Ashuach</h3>
             <div class="meta"><strong>Tomer Ashuach</strong> (PhD Student, Technion · Belinkov Lab)</div>
@@ -310,11 +335,16 @@
     </div>
   </div>
   <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" onclick="filterEvents('all', this)">All</button>
+      <button class="filter-btn" data-filter="ml" onclick="filterEvents('ml', this)">🤖 ML Interp</button>
+      <button class="filter-btn" data-filter="neuro" onclick="filterEvents('neuro', this)">🧠 Neuroscience</button>
+    </div>
     <section>
 
       <h2 style="font-size:1.1rem; color:var(--color-primary); margin:1.5rem 0 0.5rem; border-bottom: 2px solid var(--color-border); padding-bottom:0.4rem;">Spring 2026</h2>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Guest Talk · S19 · June 30, 2026</div>
         <div class="event-card-inner">
           <div style="display:flex; flex-direction:column; gap:0.8rem; flex-shrink:0;">
@@ -322,6 +352,7 @@
             <img class="event-speaker-photo" src="photos/michael_photo.jpg" alt="Michael Toker">
           </div>
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <div class="meta">June 30, 2026 · 3:00–4:00 PM ET · SEC 6.242 · ~30 min each</div>
             <h3 style="margin-top:0.8rem;">Tomer Ashuach</h3>
             <div class="meta"><strong>Tomer Ashuach</strong> (PhD Student, Technion · Belinkov Lab)</div>
@@ -333,11 +364,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Guest Talk · S18 · June 23, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/adi_photo.jpg" alt="Adi Simhi">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Old Habits and Hard Choices: How LLMs Navigate Management Decision-Making and Earlier Interactions</h3>
             <div class="meta"><strong>Adi Simhi</strong> (PhD Student, Technion · Belinkov Lab)<br/>
               June 23, 2026 · 3:00–4:00 PM ET · SEC 6.242
@@ -349,11 +381,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Guest Talk · S17 · June 16, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/alex_photo.jpg" alt="Alex Oesterling">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Modality-aware methods for interpretability</h3>
             <div class="meta"><strong>Alex Oesterling</strong> (CS PhD Student, Harvard SEAS)<br/>
               June 16, 2026 · 3:00–4:00 PM ET · SEC 6.242
@@ -364,11 +397,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="neuro">
         <div class="event-label">Guest Talk · S16 · June 2, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/juancarlos_photo.jpg" alt="Juan Carlos Fernandez del Castillo">
           <div class="event-card-content">
+            <span class="tag tag-neuro">Neuroscience</span>
             <h3>Layer-wise efficient coding in early olfactory processing</h3>
             <div class="meta"><strong>Juan Carlos Fernandez del Castillo</strong> (Graduate Student in Biophysics, Harvard University)<br/>
               June 2, 2026 · 3:00–4:00 PM ET · SEC 6.242
@@ -379,11 +413,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Guest Talk · S15 · May 26, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/william_photo.jpg" alt="William Dorrell">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>How Optimality Structures Sparse Dictionaries: A Theory for Understanding SAE Representations</h3>
             <div class="meta"><strong>William Dorrell</strong> (Kempner Fellow)<br/>
               May 26, 2026 · 3:00–4:00 PM ET · SEC 6.242
@@ -394,11 +429,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Guest Talk · S14 · May 12, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/sheridan_photo.jpg" alt="Sheridan Feucht">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Arithmetic in the Wild: Llama uses Addition to Reason About Cyclic Concepts</h3>
             <div class="meta"><strong>Sheridan Feucht</strong> (PhD Student, Northeastern University · Bau &amp; Wallace Labs · formerly Goodfire AI)<br/>
               May 12, 2026 · 3:00–4:00 PM ET · SEC 6.301
@@ -409,11 +445,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="neuro">
         <div class="event-label">Paper Discussion · S13 · April 28, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/sonja_photo.jpg" alt="Sonja Johnson-Yu">
           <div class="event-card-content">
+            <span class="tag tag-neuro">Neuroscience</span>
             <h3>Unveiling Value Functions in Social Cognition with Multi-Agent Inverse Reinforcement Learning</h3>
             <div class="meta"><strong>Sonja Johnson-Yu</strong> (Rajan Lab)<br/>
               April 28, 2026 · 3:00–4:00 PM ET · SEC 6.247
@@ -424,11 +461,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Paper Presentation · S12 · April 21, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/sumedh_photo.jpg" alt="Sumedh Hindupur">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Symmetry in Language Statistics Shapes the Geometry of Model Representations</h3>
             <div class="meta"><strong>Sumedh Hindupur</strong> (Applied Mathematics PhD Candidate)<br/>
               April 21, 2026 · 3:00–4:00 PM ET · SEC 6.247
@@ -439,11 +477,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml neuro">
         <div class="event-label">Paper Presentation · S11 · April 14, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/shubham_photo.jpg" alt="Shubham Choudhary">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span><span class="tag tag-neuro">Neuroscience</span>
             <h3>Multilevel Interpretability of Artificial Neural Networks: Leveraging Framework and Methods From Neuroscience</h3>
             <div class="meta"><strong>Shubham Choudhary</strong> (Kempner Graduate Student)<br/>
               April 14, 2026 · 3:00–4:00 PM ET · SEC 6.247
@@ -454,9 +493,10 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml neuro">
         <div class="event-label">Panel Discussion · S10 · March 31, 2026</div>
         <div class="event-card-content">
+          <span class="tag tag-ml">ML Interp</span><span class="tag tag-neuro">Neuroscience</span>
           <h3>The Nuts and Bolts of Understanding: Neurons, Circuits, Features, and Manifolds</h3>
           <div class="meta">March 31, 2026 · 3:00–4:00 PM ET · SEC 6.301–6.302</div>
           <p>Panelists debated which unit of analysis — neuron, circuit, feature, or manifold — has the most explanatory traction and which is most overhyped, then bridged across fields by asking what a satisfying circuit explanation requires and when geometric pictures add genuine insight versus elegant redescription. The closing challenge: articulate a one-sentence holy grail in terms of these units and their interactions.</p>
@@ -485,11 +525,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Paper Presentation · S9 · March 24, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/hadas_photo.jpg" alt="Hadas Orgad">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism</h3>
             <div class="meta"><strong>Hadas Orgad</strong> (Kempner Fellow)<br/>
               March 24, 2026 · 3:00–4:00 PM ET · SEC 2.122
@@ -500,11 +541,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Paper Presentation · S8 · March 10, 2026</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/andrew_photo.jpg" alt="Andrew Lee">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Decomposing Query-Key Feature Interactions Using Contrastive Covariances</h3>
             <div class="meta"><strong>Andrew Lee</strong> (Postdoc, Harvard CS)<br/>
               March 10, 2026 · 3:00–4:00 PM ET · SEC 6.242, Kempner Institute
@@ -515,9 +557,10 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml neuro">
         <div class="event-label">Panel Discussion · S7 · March 3, 2026</div>
         <div class="event-card-content">
+          <span class="tag tag-ml">ML Interp</span><span class="tag tag-neuro">Neuroscience</span>
           <h3>Interpretability: Expectations and Applications — What Counts as an Explanation and Where Is It Useful?</h3>
           <div class="meta">March 3, 2026 · 3:00–4:00 PM ET · SEC 6.242, Kempner Institute</div>
           <p>Panelists from neuroscience and ML interpretability debated what counts as an explanation — whether faithful, useful, or both — and traded concrete examples of where understanding pays off versus creates false evidence. Discussion ranged from one-sentence holy grails to bottlenecks in theory, data, and evaluation, closing on methods each field would borrow from the other.</p>
@@ -548,11 +591,12 @@
 
       <h2 style="font-size:1.1rem; color:var(--color-primary); margin:2rem 0 0.5rem; border-bottom: 2px solid var(--color-border); padding-bottom:0.4rem;">Fall 2025</h2>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Guest Talk · S6 · December 9, 2025</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/yaniv_photo.jpg" alt="Yaniv Nikankin">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Model Circuits Interpretability, and the Road to Scale It Up</h3>
             <div class="meta"><strong>Yaniv Nikankin</strong> (PhD Student, Technion · Belinkov Lab)<br/>
               December 9, 2025 · 3:00–4:00 PM ET
@@ -564,11 +608,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Paper Presentation · S5 · November 18, 2025</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/andrew_photo.jpg" alt="Andrew Lee">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Shared Global and Local Geometry of Language Model Embeddings</h3>
             <div class="meta"><strong>Andrew Lee</strong> (Postdoc, Harvard CS) · Outstanding Paper Award, COLM 2025<br/>
               November 18, 2025 · 3:00–4:00 PM ET
@@ -579,11 +624,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Paper Presentation · S4 · November 11, 2025</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/kushal_photo.jpg" alt="Kushal Chattopadhyay">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Geometric Approaches to Neural Network Training and MLLM Fine-tuning</h3>
             <div class="meta"><strong>Kushal Chattopadhyay</strong> (Undergraduate, Applied Math &amp; CS, Harvard)<br/>
               November 11, 2025 · 3:00–4:00 PM ET
@@ -594,11 +640,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="neuro">
         <div class="event-label">Paper Presentation · S3 · November 4, 2025</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/binxu_photo.jpg" alt="Binxu Wang">
           <div class="event-card-content">
+            <span class="tag tag-neuro">Neuroscience</span>
             <h3>Model-Optimized Stimuli for Comparing Brain-Alignment of Encoding and Generative Models</h3>
             <div class="meta"><strong>Binxu Wang</strong> (Kempner Research Fellow)<br/>
               November 4, 2025 · 3:00–4:00 PM ET
@@ -609,11 +656,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Paper Presentation · S2 · October 28, 2025</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/gaia_photo.jpg" alt="Gaia Grosso">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Interpretable Anomaly Detection for Scientific Discovery, Open-World Novelty Detection, and Generative Model Validation</h3>
             <div class="meta"><strong>Gaia Grosso</strong> (IAIFI Fellow, Harvard/MIT)<br/>
               October 28, 2025 · 3:00–4:00 PM ET
@@ -624,11 +672,12 @@
         </div>
       </div>
 
-      <div class="event-card">
+      <div class="event-card" data-tags="ml">
         <div class="event-label">Paper Presentation · S1 · October 21, 2025 · Pilot Session</div>
         <div class="event-card-inner">
           <img class="event-speaker-photo" src="photos/sumedh_photo.jpg" alt="Sumedh Hindupur">
           <div class="event-card-content">
+            <span class="tag tag-ml">ML Interp</span>
             <h3>Toy Models of Superposition</h3>
             <div class="meta"><strong>Sumedh Hindupur</strong> (Applied Mathematics PhD Candidate) · Neuro discussant: Shubham Choudhary<br/>
               October 21, 2025 · 3:00–4:00 PM ET · SEC 6.242, Kempner Institute
@@ -787,6 +836,35 @@
     document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
     document.getElementById('nav-' + name).classList.add('active');
     window.scrollTo(0, 0);
+  }
+
+  function filterEvents(filter, btn) {
+    document.querySelectorAll('#page-past .filter-btn').forEach(b => {
+      b.classList.remove('active', 'active-ml', 'active-neuro');
+    });
+    if (filter === 'ml') btn.classList.add('active-ml');
+    else if (filter === 'neuro') btn.classList.add('active-neuro');
+    else btn.classList.add('active');
+
+    document.querySelectorAll('#page-past .event-card').forEach(card => {
+      const tags = card.dataset.tags || '';
+      if (filter === 'all' || tags.includes(filter)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Hide section headings if all their cards are hidden
+    document.querySelectorAll('#page-past h2').forEach(h2 => {
+      let next = h2.nextElementSibling;
+      let anyVisible = false;
+      while (next && next.tagName !== 'H2') {
+        if (next.classList.contains('event-card') && next.style.display !== 'none') anyVisible = true;
+        next = next.nextElementSibling;
+      }
+      h2.style.display = anyVisible ? '' : 'none';
+    });
   }
 </script>
 
