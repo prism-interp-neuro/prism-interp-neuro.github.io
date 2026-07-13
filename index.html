@@ -103,14 +103,41 @@
 
     /* TOPIC TAGS */
     .tag {
-      display: inline-block; font-size: 0.7rem; font-weight: 700;
-      padding: 0.18rem 1rem 0.18rem 0.6rem;
-      clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 50%, calc(100% - 7px) 100%, 0 100%);
+      position: relative;
+      display: inline-block; font-size: 0.7rem; font-weight: 700; line-height: 1.4;
+      padding: 0.18rem 0.55rem;
+      border-top: 1.5px solid; border-bottom: 1.5px solid; border-left: 1.5px solid; border-right: none;
       letter-spacing: 0.05em; text-transform: uppercase;
-      margin-right: 0.5rem; margin-bottom: 0.5rem;
+      margin-right: 0.85rem; margin-bottom: 0.5rem;
     }
-    .tag-ml   { background: #ede9fe; color: #5b21b6; }
-    .tag-neuro { background: #d1fae5; color: #065f46; }
+    .tag::after, .tag::before {
+      content: '';
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 0; height: 0;
+    }
+    .tag::after {
+      right: -0.72rem;
+      border-top: 0.72rem solid transparent;
+      border-bottom: 0.72rem solid transparent;
+      border-left: 0.72rem solid var(--tag-border-color);
+      z-index: 1;
+    }
+    .tag::before {
+      right: -0.53rem;
+      border-top: 0.56rem solid transparent;
+      border-bottom: 0.56rem solid transparent;
+      border-left: 0.56rem solid var(--tag-bg);
+      z-index: 2;
+    }
+    .tag-ml {
+      --tag-bg: #ede9fe; --tag-border-color: #7c3aed;
+      background: var(--tag-bg); color: #5b21b6; border-color: var(--tag-border-color);
+    }
+    .tag-neuro {
+      --tag-bg: #d1fae5; --tag-border-color: #059669;
+      background: var(--tag-bg); color: #065f46; border-color: var(--tag-border-color);
+    }
 
     /* FILTER BUTTONS */
     .filter-bar { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.2rem 0 0.5rem; }
