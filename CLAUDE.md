@@ -26,9 +26,11 @@ Session number = highest existing `S<N>` + 1. Label format:
 Drop its sign-up/Zoom buttons and switch the abstract to past tense
 ("Yoav will discuss…" → "Yoav discussed…").
 
-**3. Past Events page.** Add the new session's card at the top of the current semester's
-section (cards run newest-first), and add the demoted event there too if it isn't already
-listed. Past Events cards carry `data-tags` and **no** sign-up/Zoom buttons.
+**3. Past Events page.** Add the **demoted** event's card at the top of the current semester's
+section (cards run newest-first), if it isn't already listed. Do **not** list the new upcoming
+session here — Past Events only holds sessions that have already happened, so a session lands
+there the following week, when it is demoted. Past Events cards carry `data-tags` and **no**
+sign-up/Zoom buttons.
 
 **4. Speaker photo.** Search the web for a headshot — the speaker's lab, department, or
 personal page is the usual source. Save as `photos/<firstname>_photo.jpg`, roughly square,
